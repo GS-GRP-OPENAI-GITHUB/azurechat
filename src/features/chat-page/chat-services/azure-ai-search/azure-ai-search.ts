@@ -162,7 +162,7 @@ export const ExtensionSimilaritySearch = async (props: {
       };
 
       // exclude the all the fields that are not in the fields array
-      const document = item.document as any;
+/*      const document = item.document as any;
       const newDocument: any = {};
 
       // iterate over the object entries in document
@@ -174,10 +174,11 @@ export const ExtensionSimilaritySearch = async (props: {
           newDocument[key] = document[key];
         }
       }
-
+*/
       results.push({
         score: result.score,
-        document: newDocument, // Use the newDocument object instead of the original document
+//        document: newDocument, // Use the newDocument object instead of the original document
+        document: document, // Use the newDocument object instead of the original document
       });
     }
 
